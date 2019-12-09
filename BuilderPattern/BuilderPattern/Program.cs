@@ -14,12 +14,16 @@ namespace BuilderPattern
         public static void Main(string[] args)
         {
             var builder = new FerrariBuilder();
+            var corvBuilder = new CorvetteBuilder();
             var director = new SportscarBuilderDirector(builder);
-            director.Construct();
-
+            var director2 = new SportscarBuilderDirector(corvBuilder);
+            director.Construct("Red", 2);
+            director2.Construct("Black",2);
             Car MyCar = builder.GetResult();
+            Car MyCorvette = corvBuilder.GetResult();
 
             Console.WriteLine($"Marke: {MyCar.Make}, Model: {MyCar.Model}, Farbe: {MyCar.Colour}, Türen: {MyCar.NumDoors}");
+            Console.WriteLine($"Marke: {MyCorvette.Make}, Model: {MyCorvette.Model}, Farbe: {MyCorvette.Colour}, Türen: {MyCorvette.NumDoors}");
             Console.ReadLine();
         }
     }

@@ -18,11 +18,29 @@ namespace BuilderPatternTest
             //arrange
             var builder = new FerrariBuilder();
             var director = new SportscarBuilderDirector(builder);
+            var colour = "Red";
+            var numboors = 2;
             //act
-            director.Construct();
+            director.Construct(colour,numboors);
             var MyCar = builder.GetResult();
             //Assert
-            Assert.IsTrue((MyCar.Make.Equals("Ferrari") && MyCar.Model.Equals("488 Spider") && MyCar.Colour.Equals("Red") && MyCar.NumDoors == 2));
+            Assert.IsTrue((MyCar.Make.Equals("Ferrari") && MyCar.Model.Equals("488 Spider") && MyCar.Colour.Equals(colour) && MyCar.NumDoors == numboors));
+
+        }
+
+        [Test]
+        public void Corvette_RedTwoDoors_IsTrue()
+        {
+            //arrange
+            var builder = new CorvetteBuilder();
+            var director = new SportscarBuilderDirector(builder);
+            var colour = "Black";
+            var numboors = 2;
+            //act
+            director.Construct(colour, numboors);
+            var MyCar = builder.GetResult();
+            //Assert
+            Assert.IsTrue((MyCar.Make.Equals("Chevrolet") && MyCar.Model.Equals("Corvette ZR1") && MyCar.Colour.Equals(colour) && MyCar.NumDoors == numboors));
 
         }
 

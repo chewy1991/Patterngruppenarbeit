@@ -8,13 +8,14 @@ using BuilderPattern.Interface;
 
 namespace BuilderPattern.Builder
 {
-    public class FerrariBuilder : ICarBuilder
+    public class CorvetteBuilder : ICarBuilder
     {
         public string Colour { get; set; }
         public int NumbDoors { get; set; }
+
         public Car GetResult()
         {
-            return NumbDoors >= 2 ? new Car("Ferrari", "488 Spider", Colour, NumbDoors) : null;
+            return NumbDoors >= 2 ? new Car("Chevrolet", "Corvette ZR1", Colour, NumbDoors) : null;
         }
     }
 }

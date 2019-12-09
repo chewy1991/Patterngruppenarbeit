@@ -16,10 +16,10 @@ namespace BuilderPattern.Director
             this._builder = builder;
         }
 
-        public void Construct()
+        public void Construct(string colour, int numbdoors)
         {
-            _builder.Colour = "Red";
-            _builder.NumbDoors = 2;
+            _builder.Colour = colour;
+            _builder.NumbDoors = numbdoors;
         }
 
     }

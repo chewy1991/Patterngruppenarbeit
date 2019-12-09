@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builder\CorvetteBuilder.cs" />
     <Compile Include="Builder\FerrariBuilder.cs" />
     <Compile Include="Classes\Car.cs" />
     <Compile Include="Director\SportscarBuilderDirector.cs" />
