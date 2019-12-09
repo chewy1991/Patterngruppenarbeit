@@ -1,0 +1,14 @@
+Problem:
+- Wie kann eine Klasse verschiedene Darstellungen von einem komplexen Objekt erstellen?
+- Wie kann eine Klasse die Erstellung eines komplexen Objekts vereinfachen?
+
+Vorteil:
+- Ermöglicht die interne Darstellung eines Produkts zu variieren.
+- Verkapselt Code zur Konstruktion und Darstellung
+- Ermöglicht Kontrolle über die Schritte des Konstruktionsprozesses.
+
+Nachteil:
+- Benötigt das Erstellen eines seperaten Builder für jedes unterschiedliche Produkt
+- Die Builderklassen müssen mutierbar sein.
+- Datenträger einer Klassen sind nicht garantiert initialisiert.
+- Dependency Injection ist weniger unterstützt.
